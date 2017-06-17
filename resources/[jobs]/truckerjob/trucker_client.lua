@@ -190,6 +190,7 @@ function tick()
       distance = tonumber(math.floor(distance))
       TriggerServerEvent("truckerJob:addMoney", distance)
       TriggerEvent("mt:missiontext", "Vous êtes arrivé. Vous avez obtenu ~g~$"..distance, 10000)
+      TriggerServerEvent("vmenu:lastChar")
       SetBlipRoute(BLIP.company, false)
       MISSION.toDest = false
       MISSION.removeMarker()
